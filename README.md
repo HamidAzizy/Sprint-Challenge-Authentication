@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+- to send credential for every API requests.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+- It Hashes the password or make it not readable.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+- cannot get the password with the hash. it may deficult for the hackers to hack the password.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+- Header, body or Payload , Signature
 
 ## Minimum Viable Product
 

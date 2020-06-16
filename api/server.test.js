@@ -1,7 +1,8 @@
 const server = require('./server.js')
-const bcrypt = require('bcryptjs')
 const db = require('../database/dbConfig.js')
 const request = require('supertest')
+const Users = require('../auth/auth-model.js')
+const mockData = require('../config/mockData.js')
 
 
 describe('Server configuration', () => {
@@ -27,6 +28,22 @@ describe('End Points', () => {
 
 }
 )
+
+
+describe("insert()", () => {
+    it("", () => { });
+    beforeEach(async () => {
+        await db("users").truncate();
+    })
+    it("should insert a user to the DB", async () => {
+        await Users.addUser(mockData[0]);
+        await Users.addUser(mockData[1]);
+
+        const users = await db("users");
+        expect(users).toHaveLength(2);
+    });
+});
+
 
 beforeEach(async () => {
     await db('users').truncate();

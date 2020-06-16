@@ -1,5 +1,14 @@
 ###
-POST http://localhost:3300/api/auth/Register
+POST https://credentials-lambda.herokuapp.com/api/auth/Register
+Content-Type: application/json
+
+{
+    "username": "Amin",
+    "password": "Amin"
+}
+
+###
+POST https://credentials-lambda.herokuapp.com/api/auth/Login
 Content-Type: application/json
 
 {
@@ -8,19 +17,10 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3300/api/auth/Login
-Content-Type: application/json
-
-{
-    "username": "Hamid",
-    "password": "Hamid"
-}
+GET https://credentials-lambda.herokuapp.com/api/jokes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkhhbWlkIiwiaWF0IjoxNTkyMTY1ODQwLCJleHAiOjE1OTIxNjU5NjB9.1zKf1fm16AZHUTYALHjqpFPNY2vpcsaXdgQ6YBzOy6c
 
 ###
-GET http://localhost:3300/api/jokes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkhhbWlkIiwiaWF0IjoxNTkyMTU4MjQ3LCJleHAiOjE1OTIxNTgzNjd9.JTCo62i6MKTG25EhIF08-cxNDwu5suNzZxUDfByflU8
-
-###
-GET http://localhost:3300/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkhhbWlkIiwiaWF0IjoxNTkyMTU4MjQ3LCJleHAiOjE1OTIxNTgzNjd9.JTCo62i6MKTG25EhIF08-cxNDwu5suNzZxUDfByflU8
+GET https://credentials-lambda.herokuapp.com/api/Users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkhhbWlkIiwiaWF0IjoxNTkyMTY1ODQwLCJleHAiOjE1OTIxNjU5NjB9.1zKf1fm16AZHUTYALHjqpFPNY2vpcsaXdgQ6YBzOy6c
 
